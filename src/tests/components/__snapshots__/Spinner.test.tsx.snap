@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <Spinner /> component should show the spinner 1`] = `
+<div>
+  <div
+    class="spinner"
+    data-testid="spinner"
+  >
+    <div
+      class="lds-facebook"
+    >
+      <div />
+      <div />
+      <div />
+    </div>
+  </div>
+</div>
+`;

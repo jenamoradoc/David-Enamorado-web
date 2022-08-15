@@ -1,0 +1,51 @@
+.search__form-container {
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  border-right: 1px solid #d8d8d8;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.search__form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search__form-title {
+  font-weight: 400;
+}
+
+.search__form-input {
+  font-size: 20px;
+  padding: 6px 10px;
+  width: 100%;
+}
+
+.search__form-btns__container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.search__form-btn {
+  background: #5b5f63;
+  border: 1px solid transparent;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 5px 15px;
+}
+
+.error__message {
+  background: #f86262;
+  color: #fff;
+  left: 15px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+}

@@ -1,0 +1,78 @@
+.results__sort {
+  display: flex;
+  margin: 0 auto 10px;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.results__list {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 190px);
+  height: 680px;
+  justify-content: center;
+  margin: 0;
+}
+
+.results__list-item {
+  align-items: center;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.results__list-item-image {
+  border-radius: 50%;
+  width: 90%;
+}
+
+.results__list-item-login,
+.results__list-item-type {
+  padding: 2px 0;
+}
+
+.buttons__container {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  /* gap: 1px; */
+}
+
+.buttons__container button {
+  background: #fff;
+  border: 1px solid #696969;
+  font-size: 15px;
+  padding: 4px 0;
+  transition: all 0.3s ease;
+  width: 30px;
+}
+
+.buttons__container button:disabled,
+.buttons__container button:hover:disabled {
+  background: none;
+  border-color: transparent;
+  background-color: #000;
+  color: #cccccc;
+}
+
+.buttons__container button:hover {
+  background: #696969;
+  color: #fff;
+}
+
+.results__message {
+  max-width: 600px;
+  margin: auto;
+}
+
+.results__message h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.results__message img {
+  height: 100%;
+  width: 100%;
+}
