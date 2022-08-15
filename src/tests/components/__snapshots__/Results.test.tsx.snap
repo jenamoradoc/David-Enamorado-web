@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <Results /> should render a list of elements 1`] = `
+<div>
+  <div>
+    <select
+      class="results__sort"
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        --Choose an option
+      </option>
+      <option
+        value="best match"
+      >
+        Best Match
+      </option>
+      <option
+        value="followers"
+      >
+        Followers
+      </option>
+      <option
+        value="repositories"
+      >
+        Repositories
+      </option>
+      <option
+        value="joined"
+      >
+        Joined
+      </option>
+    </select>
+    <ul
+      class="results__list"
+    >
+      <li
+        class="results__list-item"
+      >
+        <img
+          alt="pedro"
+          class="results__list-item-image"
+          draggable="false"
+          src="pedro.jpg"
+        />
+        <strong
+          class="results__list-item-login"
+        >
+          pedro
+        </strong>
+        <span
+          class="results__list-item-type"
+        >
+          User
+        </span>
+      </li>
+      <li
+        class="results__list-item"
+      >
+        <img
+          alt="pedro123"
+          class="results__list-item-image"
+          draggable="false"
+          src="pedro123.jpg"
+        />
+        <strong
+          class="results__list-item-login"
+        >
+          pedro123
+        </strong>
+        <span
+          class="results__list-item-type"
+        >
+          User
+        </span>
+      </li>
+    </ul>
+    <div
+      class="buttons__container"
+    >
+      <button
+        disabled=""
+        style="border-radius: 5px 0 0 5px;"
+      >
+        «
+      </button>
+      <button
+        data-testid="1"
+        disabled=""
+      >
+        1
+      </button>
+      <button
+        disabled=""
+        style="border-radius: 0 5px 5px 0;"
+      >
+        »
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Testing <Results /> should render the initial screen 1`] = `
+<div>
+  <div />
+</div>
+`;

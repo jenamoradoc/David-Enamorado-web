@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing <Search /> should show the initial screen 1`] = `
+<div>
+  <aside
+    class="search__form-container"
+  >
+    <form
+      class="search__form"
+    >
+      <input
+        class="search__form-input"
+        placeholder="Enter a username"
+        type="text"
+        value=""
+      />
+      <button
+        class="search__form-btn"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
+  </aside>
+</div>
+`;
