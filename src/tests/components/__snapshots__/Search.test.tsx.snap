@@ -8,18 +8,31 @@ exports[`Testing <Search /> should show the initial screen 1`] = `
     <form
       class="search__form"
     >
+      <h1
+        class="search__form-title"
+      >
+        Search github user(s)
+      </h1>
       <input
         class="search__form-input"
-        placeholder="Enter a username"
         type="text"
         value=""
       />
-      <button
-        class="search__form-btn"
-        type="submit"
+      <div
+        class="search__form-btns__container"
       >
-        Submit
-      </button>
+        <button
+          class="search__form-btn"
+          type="submit"
+        >
+          Submit
+        </button>
+        <button
+          class="search__form-btn"
+        >
+          Clear Filter
+        </button>
+      </div>
     </form>
   </aside>
 </div>

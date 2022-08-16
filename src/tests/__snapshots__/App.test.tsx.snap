@@ -11,21 +11,47 @@ exports[`Testing <App /> Should render the initial content 1`] = `
       <form
         class="search__form"
       >
+        <h1
+          class="search__form-title"
+        >
+          Search github user(s)
+        </h1>
         <input
           class="search__form-input"
-          placeholder="Enter a username"
           type="text"
           value=""
         />
-        <button
-          class="search__form-btn"
-          type="submit"
+        <div
+          class="search__form-btns__container"
         >
-          Submit
-        </button>
+          <button
+            class="search__form-btn"
+            type="submit"
+          >
+            Submit
+          </button>
+          <button
+            class="search__form-btn"
+          >
+            Clear Filter
+          </button>
+        </div>
       </form>
     </aside>
-    <div />
+    <div>
+      <div
+        class="results__message"
+      >
+        <h2>
+          GitHub User Search App
+        </h2>
+        <img
+          alt="Team"
+          draggable="false"
+          src="team.svg"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -41,18 +67,31 @@ exports[`Testing <App /> should show results when the input field is changed and
       <form
         class="search__form"
       >
+        <h1
+          class="search__form-title"
+        >
+          Search github user(s)
+        </h1>
         <input
           class="search__form-input"
-          placeholder="Enter a username"
           type="text"
           value="pedro"
         />
-        <button
-          class="search__form-btn"
-          type="submit"
+        <div
+          class="search__form-btns__container"
         >
-          Submit
-        </button>
+          <button
+            class="search__form-btn"
+            type="submit"
+          >
+            Submit
+          </button>
+          <button
+            class="search__form-btn"
+          >
+            Clear Filter
+          </button>
+        </div>
       </form>
     </aside>
     <div>
@@ -173,15 +212,15 @@ exports[`Testing <App /> should show results when the input field is changed and
           class="results__list-item"
         >
           <img
-            alt="Pedromdsn"
+            alt="pedrouid"
             class="results__list-item-image"
             draggable="false"
-            src="https://avatars.githubusercontent.com/u/57453260?v=4"
+            src="https://avatars.githubusercontent.com/u/10136079?v=4"
           />
           <strong
             class="results__list-item-login"
           >
-            Pedromdsn
+            pedrouid
           </strong>
           <span
             class="results__list-item-type"
@@ -193,15 +232,15 @@ exports[`Testing <App /> should show results when the input field is changed and
           class="results__list-item"
         >
           <img
-            alt="pedrouid"
+            alt="Pedromdsn"
             class="results__list-item-image"
             draggable="false"
-            src="https://avatars.githubusercontent.com/u/10136079?v=4"
+            src="https://avatars.githubusercontent.com/u/57453260?v=4"
           />
           <strong
             class="results__list-item-login"
           >
-            pedrouid
+            Pedromdsn
           </strong>
           <span
             class="results__list-item-type"
@@ -253,152 +292,6 @@ exports[`Testing <App /> should show results when the input field is changed and
           class="results__list-item"
         >
           <img
-            alt="pedrofracassi"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/25179120?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pedrofracassi
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
-      </ul>
-      <div
-        class="buttons__container"
-      >
-        <button
-          disabled=""
-          style="border-radius: 5px 0 0 5px;"
-        >
-          «
-        </button>
-        <button
-          data-testid="1"
-          disabled=""
-        >
-          1
-        </button>
-        <button
-          data-testid="2"
-        >
-          2
-        </button>
-        <button
-          data-testid="3"
-        >
-          3
-        </button>
-        <button
-          data-testid="4"
-        >
-          4
-        </button>
-        <button
-          data-testid="5"
-        >
-          5
-        </button>
-        <button
-          data-testid="6"
-        >
-          6
-        </button>
-        <button
-          data-testid="7"
-        >
-          7
-        </button>
-        <button
-          data-testid="8"
-        >
-          8
-        </button>
-        <button
-          data-testid="9"
-        >
-          9
-        </button>
-        <button
-          style="border-radius: 0 5px 5px 0;"
-        >
-          »
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Testing <App /> should show the next results when the Next Page button is clicked 1`] = `
-<div>
-  <div
-    class="container"
-  >
-    <aside
-      class="search__form-container"
-    >
-      <form
-        class="search__form"
-      >
-        <input
-          class="search__form-input"
-          placeholder="Enter a username"
-          type="text"
-          value="pedro"
-        />
-        <button
-          class="search__form-btn"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
-    </aside>
-    <div>
-      <select
-        class="results__sort"
-      >
-        <option
-          disabled=""
-          value=""
-        >
-          --Choose an option
-        </option>
-        <option
-          value="best match"
-        >
-          Best Match
-        </option>
-        <option
-          value="followers"
-        >
-          Followers
-        </option>
-        <option
-          value="repositories"
-        >
-          Repositories
-        </option>
-        <option
-          value="joined"
-        >
-          Joined
-        </option>
-      </select>
-      <ul
-        class="results__list"
-      >
-        <li
-          class="results__list-item"
-        >
-          <img
             alt="pedrualves"
             class="results__list-item-image"
             draggable="false"
@@ -415,183 +308,24 @@ exports[`Testing <App /> should show the next results when the Next Page button 
             User
           </span>
         </li>
-        <li
-          class="results__list-item"
-        >
-          <img
-            alt="pedrobaeza"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/7165771?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pedrobaeza
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
-        <li
-          class="results__list-item"
-        >
-          <img
-            alt="pedrofranceschi"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/114711?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pedrofranceschi
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
-        <li
-          class="results__list-item"
-        >
-          <img
-            alt="pepicrft"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/663605?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pepicrft
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
-        <li
-          class="results__list-item"
-        >
-          <img
-            alt="pmarkun"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/682827?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pmarkun
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
-        <li
-          class="results__list-item"
-        >
-          <img
-            alt="pedroabreudev"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/85113076?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pedroabreudev
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
-        <li
-          class="results__list-item"
-        >
-          <img
-            alt="pedrobergamini"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/41773103?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pedrobergamini
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
-        <li
-          class="results__list-item"
-        >
-          <img
-            alt="pedrommcarrasco"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/26525777?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pedrommcarrasco
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
-        <li
-          class="results__list-item"
-        >
-          <img
-            alt="pedrohcdo"
-            class="results__list-item-image"
-            draggable="false"
-            src="https://avatars.githubusercontent.com/u/5511316?v=4"
-          />
-          <strong
-            class="results__list-item-login"
-          >
-            pedrohcdo
-          </strong>
-          <span
-            class="results__list-item-type"
-          >
-            User
-          </span>
-        </li>
       </ul>
       <div
         class="buttons__container"
       >
         <button
+          disabled=""
           style="border-radius: 5px 0 0 5px;"
         >
           «
         </button>
         <button
           data-testid="1"
+          disabled=""
         >
           1
         </button>
         <button
           data-testid="2"
-          disabled=""
         >
           2
         </button>
