@@ -1,5 +1,4 @@
 import {
-  cleanup,
   render,
   screen,
   waitFor,
@@ -10,8 +9,6 @@ import userEvent from "@testing-library/user-event";
 import App from "../App";
 
 describe("Testing <App />", () => {
-  // afterEach(cleanup);
-
   test("Should render the initial content", () => {
     const { container } = render(<App />);
 
@@ -34,15 +31,14 @@ describe("Testing <App />", () => {
   test("should be empty the input field", () => {
     render(<App />);
 
-    expect((screen.getByRole("textbox") as HTMLInputElement).value).toBe("");
-    expect((screen.getByRole("textbox") as HTMLInputElement).value.length).toBe(
-      0
+    expect((screen.getByRole("textbox") as HTMLInputElement).value.trim()).toBe(
+      ""
     );
   });
 
   test("should show a Submit button", () => {
     render(<App />);
-    expect(screen.getByRole("button")).toBeInTheDocument();
+    expect(screen.getByText(/submit/i)).toBeInTheDocument();
   });
 
   test("should change the input value", async () => {
@@ -87,7 +83,7 @@ describe("Testing <App />", () => {
   });
 
   test("should show the next results when the Next Page button is clicked", async () => {
-    const { container } = render(<App />);
+    render(<App />);
 
     userEvent.type(screen.getByRole("textbox"), "pedro");
     userEvent.click(screen.getByText(/submit/i));
@@ -112,7 +108,31 @@ describe("Testing <App />", () => {
 
     await waitFor(() => screen.findByRole("list"));
     expect(screen.getAllByRole("listitem").length).toBeGreaterThan(0);
+  });
 
-    expect(container).toMatchSnapshot();
+  test("should show the no results page when there are no results in the search", async () => {
+    render(<App />);
+
+    userEvent.type(screen.getByRole("textbox"), "wejhifhejwfiwehfuewhuw");
+    userEvent.click(screen.getByText(/submit/i));
+
+    expect(screen.getByTestId("spinner")).toBeInTheDocument();
+
+    await waitForElementToBeRemoved(() => screen.queryByTestId("spinner"));
+
+    expect(screen.getByText(/results not found/i)).toBeInTheDocument();
+  });
+
+  test("should clear the input element when the Clear Filter button is clicked", async () => {
+    render(<App />);
+
+    userEvent.type(screen.getByRole("textbox"), "pedro");
+    userEvent.click(screen.getByText(/submit/i));
+
+    userEvent.click(screen.getByText(/clear filter/i));
+
+    expect((screen.getByRole("textbox") as HTMLInputElement).value.trim()).toBe(
+      ""
+    );
   });
 });

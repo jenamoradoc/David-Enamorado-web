@@ -105,6 +105,19 @@ exports[`Testing <Results /> should render a list of elements 1`] = `
 
 exports[`Testing <Results /> should render the initial screen 1`] = `
 <div>
-  <div />
+  <div>
+    <div
+      class="results__message"
+    >
+      <h2>
+        GitHub User Search App
+      </h2>
+      <img
+        alt="Team"
+        draggable="false"
+        src="team.svg"
+      />
+    </div>
+  </div>
 </div>
 `;
